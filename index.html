@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="CLOCKIN.HUB — premium oversized unisex streetwear." />
+  <title>CLOCKIN.HUB — Streetwear / Oversized / Unisex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="announcement">FREE SHIPPING ON ORDERS ABOVE ₹1,999 <span>✦</span> NEW DROP LIVE NOW</div>
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Clockin Hub home"><img src="assets/logo.png" alt="CLOCKIN.HUB logo"></a>
+    <nav>
+      <a href="#shop">Shop</a><a href="#story">Our story</a><a href="#size">Fit guide</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-btn" id="cartOpen" aria-label="Open shopping bag">Bag <span id="cartCount">0</span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">DROP 01 / 2026</p>
+        <h1>BUILT<br><em>DIFFERENT.</em></h1>
+        <p class="hero-sub">Oversized silhouettes. Statement graphics. No rules. CLOCKIN.HUB is made for the ones who don't dress to blend in.</p>
+        <a class="btn gold" href="#shop">Shop the drop <span>↗</span></a>
+      </div>
+      <div class="hero-art"><div class="orb"></div><img src="assets/black-tee.png" alt="CLOCKIN.HUB black graphic oversized tee"></div>
+      <div class="hero-stamp">STREETWEAR<br><span>/</span> OVERSIZED <span>/</span><br>UNISEX</div>
+    </section>
+
+    <section class="ticker" aria-hidden="true"><div>WEAR YOUR ATTITUDE ✦ CLOCKIN.HUB ✦ WEAR YOUR ATTITUDE ✦ CLOCKIN.HUB ✦</div></section>
+
+    <section class="shop section" id="shop">
+      <div class="section-head"><div><p class="eyebrow">THE DROP</p><h2>Latest pieces</h2></div><p class="muted">01 — 03</p></div>
+      <div class="products">
+        <article class="product" data-name="The Observer Tee" data-price="1499" data-image="assets/black-tee.png">
+          <div class="product-img"><span class="tag">BESTSELLER</span><img src="assets/black-tee.png" alt="The Observer black oversized tee"><button class="quick">Quick add +</button></div>
+          <div class="product-meta"><div><h3>The Observer Tee</h3><p>Black / Oversized / Unisex</p></div><strong>₹1,499</strong></div>
+        </article>
+        <article class="product" data-name="Medusa Red Tee" data-price="1499" data-image="assets/red-tee.jpeg">
+          <div class="product-img"><span class="tag red">DROP 01</span><img src="assets/red-tee.jpeg" alt="Medusa red graphic oversized tee"><button class="quick">Quick add +</button></div>
+          <div class="product-meta"><div><h3>Medusa Red Tee</h3><p>Red / Graphic / Unisex</p></div><strong>₹1,499</strong></div>
+        </article>
+        <article class="product" data-name="Purple Dragon Track Pant" data-price="1799" data-image="assets/purple-pants.png">
+          <div class="product-img"><span class="tag purple">LIMITED</span><img src="assets/purple-pants.png" alt="Black oversized purple dragon track pants"><button class="quick">Quick add +</button></div>
+          <div class="product-meta"><div><h3>Purple Dragon Track Pant</h3><p>Black / Wide fit / Unisex</p></div><strong>₹1,799</strong></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="statement" id="story">
+      <div class="statement-mark">CK</div>
+      <p class="eyebrow">THE CLOCKIN CODE</p>
+      <h2>DON'T FOLLOW<br><span>THE CLOCK.</span></h2>
+      <p>Streetwear for late nights, loud ideas and people building their own lane. Every piece is designed oversized, unapologetic and ready to be lived in.</p>
+    </section>
+
+    <section class="features" id="size">
+      <div><span>01</span><h3>Heavyweight feel</h3><p>Made to hold its shape and live beyond one season.</p></div>
+      <div><span>02</span><h3>Oversized by design</h3><p>Relaxed proportions with an easy unisex fit.</p></div>
+      <div><span>03</span><h3>Graphic energy</h3><p>Artwork-led pieces that do the talking for you.</p></div>
+    </section>
+
+    <section class="newsletter" id="contact">
+      <p class="eyebrow">JOIN THE HUB</p><h2>FIRST ACCESS.<br>ZERO FOMO.</h2>
+      <form id="newsletter"><input type="email" placeholder="your@email.com" required><button class="btn gold" type="submit">Join <span>→</span></button></form>
+      <small id="formMsg"></small>
+    </section>
+  </main>
+
+  <footer><div class="footer-logo"><img src="assets/logo.png" alt="CLOCKIN.HUB"></div><p>STREETWEAR / OVERSIZED / UNISEX</p><div class="footer-links"><a href="#shop">Shop</a><a href="#story">Story</a><a href="#contact">Instagram</a></div><small>© 2026 CLOCKIN.HUB. All rights reserved.</small></footer>
+
+  <aside class="cart" id="cart" aria-label="Shopping bag"><div class="cart-head"><h2>Your bag</h2><button id="cartClose">×</button></div><div id="cartItems" class="cart-items"><p class="empty">Your bag is empty.</p></div><div class="cart-bottom"><div><span>Subtotal</span><strong id="subtotal">₹0</strong></div><button class="btn gold" id="checkout">Checkout <span>→</span></button><small>Demo checkout — connect your payment provider before launch.</small></div></aside>
+  <div class="overlay" id="overlay"></div>
+  <script src="script.js"></script>
+</body>
+</html>
