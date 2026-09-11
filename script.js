@@ -74,7 +74,7 @@ document.getElementById('checkout').onclick = function () {
   const total = cart.reduce((sum, item) => sum + item.price, 0);
 
   const options = {
-    key: 'PASTE_YOUR_RAZORPAY_KEY_ID_HERE',
+    key: 'rzp_test_Tafraj9NP8ietI',
     amount: total * 100,
     currency: 'INR',
     name: 'CLOCKIN.HUB',
