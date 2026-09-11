@@ -64,8 +64,60 @@ function removeItem(i) {
   renderCart();
 }
 
-document.getElementById('checkout').onclick = function () {
+document.getElementById('checkout').onclick = async function () {
 
+  if (cart.length === 0) {
+    alert('Your bag is empty.');
+    return;
+  }
+
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
+
+  try {
+    const response = await fetch(
+      'https://script.google.com/macros/s/AKfycbxBLivF3Ng1M006HSzsS31Y2zsyScurzM8CsbBVEw4YW7Cmw-QhlZCmL-vRt-YcXStYlA/exec',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          amount: total
+        })
+      }
+    );
+
+    const order = await response.json();
+
+    if (!order.order_id) {
+      throw new Error(order.error || 'Order creation failed');
+    }
+
+    const options = {
+      key: 'rzp_test_Tafraj9NP8ietI',
+      amount: order.amount,
+      currency: 'INR',
+      name: 'CLOCKIN.HUB',
+      description: 'CLOCKIN.HUB Order',
+      order_id: order.order_id,
+
+      handler: function (response) {
+        alert(
+          'Payment successful!\nPayment ID: ' +
+          response.razorpay_payment_id
+        );
+      },
+
+      theme: {
+        color: '#000000'
+      }
+    };
+
+    const razorpay = new Razorpay(options);
+    razorpay.open();
+
+  } catch (error) {
+    console.error(error);
+    alert('Payment start nahi ho paaya. Please try again.');
+  }
+};
   if (cart.length === 0) {
     alert('Your bag is empty.');
     return;
